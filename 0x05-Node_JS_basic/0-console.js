@@ -1,11 +1,10 @@
-
-n to display a message in STDOUT.
- * @param {string} message - The message to be displayed.
+/**
+ * Displays a message on the STDOUT.
+ * @param {String} msg The message to display.
+ * @author Bezaleel Olakunori <https://github.com/B3zaleel>
  */
-function displayMessage(message) {
-  console.log(message);
-}
+const displayMessage = (msg) => {
+  console.log(msg);
+};
 
-// Exporting the function
 module.exports = displayMessage;
-

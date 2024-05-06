@@ -1,17 +1,13 @@
 mport express from 'express';
-import routes from './routes';
+import mapRoutes from './routes';
 
 const app = express();
 const PORT = 1245;
 
-// Use routes defined in full_server/routes/index.js
-app.use('/', routes);
-
-// Start the server
+mapRoutes(app);
 app.listen(PORT, () => {
-  console.log(`Server is running and listening on port ${PORT}`);
+  console.log(`Server listening on PORT ${PORT}`);
 });
 
-// Export the app
 export default app;
-
+module.exports = app;
